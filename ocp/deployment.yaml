@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jonas-lernia-app
+  name: henrik-lernia-app
   annotations:
     image.openshift.io/triggers: '[{
       "from": {
@@ -15,17 +15,17 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: jonas-lernia-app
+      app: henrik-lernia-app
   template:
     metadata:
       annotations:
         alpha.image.policy.openshift.io/resolve-names: '*'
       labels:
-        app: jonas-lernia-app
+        app: henrik-lernia-app
     spec:
       containers:
-      - name: jonas-lernia-app
-        image: jonas-lernia-app:latest
+      - name: henrik-lernia-app
+        image: henrik-lernia-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
