@@ -10,11 +10,11 @@ spec:
   - annotations: null
     from:
       kind: DockerImage
-      name: ghcr.io/henrikdevops/lernia-app:latest
+      name: ghcr.io/henrikdevops/lernia-app:main
     importPolicy:
       importMode: Legacy
       scheduled: true
-    name: latest
+    name: main
     referencePolicy:
       type: Source
 
