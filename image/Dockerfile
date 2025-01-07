@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi9:latest AS builder
 
 RUN dnf install -y git-core golang make
-RUN git clone https://github.com/henrikdevops/lernia-app.git && cd lernia-app/src && make
+RUN git clone https://github.com/jonarbjork/lernia-app.git && cd lernia-app/src && make
 
 
 FROM registry.access.redhat.com/ubi9-minimal:latest
