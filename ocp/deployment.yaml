@@ -7,7 +7,7 @@ metadata:
     image.openshift.io/triggers: '[{
       "from": {
         "kind": "ImageStreamTag",
-        "name": "lernia-app:latest"
+        "name": "henrik-lernia-app:main"
       },
       "fieldPath": "spec.template.spec.containers[?(@.name==\"henrik-lernia-app\")].image"
     }]'
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: henrik-lernia-app
-        image: lernia-app:latest
+        image: henrik-lernia-app:main
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
